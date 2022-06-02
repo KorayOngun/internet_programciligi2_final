@@ -1,0 +1,52 @@
+<mat-grid-list  cols="5" rowHeight="50px">
+  <mat-grid-tile style="margin-top: 50px;" colspan="3" [rowspan]="12">
+    <mat-grid-tile-header style="color:yellow;font-size: xx-large">
+      <h1>{{Ilan.baslik}}</h1>
+    </mat-grid-tile-header>
+    <img  style="width: 80%;height:90%;position: relative;top:5% "  [src]="srvs.dosyaUrl+seciliFoto">
+  </mat-grid-tile>
+  <mat-grid-tile colspan="2" [rowspan]="12">
+    <mat-list style="margin-top: 110px;background-color: burlywood;width: 100%;height: 100%;" role="list">
+      <mat-list-item role="listitem">Durum: {{Ilan.durum}}</mat-list-item>
+      <mat-list-item role="listitem">Oda sayısı: {{Ilan.kat}}</mat-list-item>
+      <mat-list-item  role="listitem">Şehir: {{Ilan.sehir}}</mat-list-item>
+      <mat-list-item role="listitem">Fiyat: {{Ilan.fiyat}}</mat-list-item>
+      <mat-list-item role="listitem">Metrekare:  &nbsp; {{Ilan.metrekare}}</mat-list-item>
+      <mat-list-item role="listitem">Krediye Uygun: {{Ilan.kredi}}</mat-list-item>
+      <mat-list-item role="listitem">Eşyalı: {{Ilan.esya}}</mat-list-item>
+      <mat-list-item role="listitem">Kat sayısı: {{Ilan.katsayisi}}</mat-list-item>
+      <mat-list-item role="listitem">Bulunduğu kat: {{Ilan.bulundugukat}}</mat-list-item>
+    </mat-list>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="3" [rowspan]="6">
+    <img *ngFor="let item of fotolar" (click)="resimDegistir(item)"  style="width: 100px;height: 100px;margin: 15px;"  [src]="srvs.dosyaUrl+item">
+  </mat-grid-tile>
+  <mat-grid-tile colspan="2" [rowspan]="3">
+  </mat-grid-tile>
+  <mat-grid-tile colspan="5" [rowspan]="2">
+    <h3>{{Ilan.aciklama}}</h3>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="5" [rowspan]="1">
+    <h1>Özellikler</h1>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="5" [rowspan]="1">
+    <mat-chip-list aria-label="Fish selection">
+      <mat-chip *ngFor="let item of ozellikler">{{item}}</mat-chip>
+    </mat-chip-list>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="5" [rowspan]="2">
+
+  </mat-grid-tile>
+  <mat-grid-tile colspan="5" [rowspan]="1">
+      <h1>muhit</h1>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="5" [rowspan]="0.5">
+    <mat-chip-list aria-label="Fish selection">
+      <mat-chip *ngFor="let item of muhit">{{item}}</mat-chip>
+    </mat-chip-list>
+  </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-dialog-actions align="end">
+    <button mat-button  mat-dialog-close color="primary">Çıkış</button>
+  </mat-dialog-actions>

@@ -1,0 +1,9 @@
+
+mat-divider {
+  width: 100%;
+}
+mat-list-item{
+  border: 3px;
+  border-color: black;
+  border-style: solid;
+}
