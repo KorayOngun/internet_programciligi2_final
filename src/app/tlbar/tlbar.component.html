@@ -1,0 +1,77 @@
+<mat-toolbar>
+  <a href="">
+    <button
+      style="margin-left: 15px"
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>home</mat-icon>
+    </button></a
+  >
+
+  <span class="example-spacer"></span>
+  <a href=""></a>
+  <span *ngIf="login" style="margin-right: 15px">{{kAdii}}</span>
+
+  <a href="/userpage" *ngIf="login">
+    <button
+      style="margin-right: 15px"
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>account_box</mat-icon>
+    </button></a
+  >
+  <a href="/newpage" *ngIf="login">
+    <button
+      style="margin-right: 15px"
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>add_box</mat-icon>
+    </button></a
+  >
+  <a href="/message" *ngIf="login">
+    <button
+      style="margin-right: 15px"
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>message</mat-icon>
+    </button></a
+  >
+  <a href="/" *ngIf="login">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    (click)="cikis()"
+    >
+      <mat-icon>logout</mat-icon>
+    </button></a
+  >
+  <a href="/createuser" *ngIf="!login">
+    <button
+      style="margin-right: 15px"
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <span style="margin-right: 15px">Üye ol</span>
+    </button></a
+  >
+  <a href="/loginuser" *ngIf="!login">
+    <button
+      style="margin-right: 15px"
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon title="giriş yap">login</mat-icon>
+    </button></a
+  >
+</mat-toolbar>

@@ -1,0 +1,7 @@
+<p>
+ İlan Silinsin mi?
+</p>
+<mat-dialog-actions align="end">
+  <button mat-button  mat-dialog-close color="primary">İptal</button>
+  <button mat-button (click)="sil()" [mat-dialog-close]="true" color="warn" cdkFocusInitial>Sil</button>
+</mat-dialog-actions>

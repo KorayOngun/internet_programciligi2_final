@@ -1,0 +1,20 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.example-container {
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-card {
+  max-width: 250px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+table {
+  width: 100%;
+}
